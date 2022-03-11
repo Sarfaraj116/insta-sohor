@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+            <a class="navbar-brand" href="#">Insta-Sohor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
+
+                    <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <i class="fa-solid fa-heart text-danger"></i>
+                    </li>
+
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+        <div id="posts">
+        </div>
+        <div id="liked">
+            <h1>Liked posts</h1>
+        </div>
+
+        <div id="reported">
+            <h1>Reported posts</h1>
+        </div>
+    </main>
+    <footer>
+        <section class="mx-5">
+            <article>
+                <h1>How javascript works on browser?</h1>
+                <p>Javascript is a client site scripting language which is written inside script tag in html. When we
+                    open the html file in browser which have already some javascript code, that javascript code recieve
+                    by a browser engine. For chrome browser it is called v8 engine which convert javascript code into
+                    machine code line by line. Then that converted code sent to system for execute. By this we can see
+                    the output and that's how javascript works. V8 engine have a feature called parser which stop the
+                    execution if found any error in code.Another feature called AST which create data structure after
+                    parsing.</p>
+            </article>
+            <article>
+                <h1>What does Javascript event loop do?</h1>
+                <p>Event loop is a connector between queue and call stack.We know all the synchronous functions stay on
+                    call stack and if there is a asynchronous function browser engine pass it to queue. In call stack
+                    synchronous function stay as a stack which means last in and first out. By this all the synchronous
+                    function finish. Than it calls queue for the remaining asynchronous functions. Queue send the
+                    asynchronous functions through event loop which is works as a first in and first out.That means
+                    which asynchronous functions comes at first in queue goes first to call stack through event loop.
+                </p>
+            </article>
+            <article>
+                <h1>What's the difference between local storage and session storage?</h1>
+                <p>In session storage data stays at temporary. Which means if we close the browser the session storage
+                    will be cleared. But in local storage data stays at permanent untill we clear them manually.But if
+                    we create a new tab session storage auto creates and if we close the tab it auto deletes. But in
+                    case of local storage it doesn't work for any specific tab. If we open same page on multiple tab ,
+                    they will have a different session storage. On the other hand local storage will only have one in
+                    case of opening same page on multiple tab.</p>
+            </article>
+        </section>
+    </footer>
+
+    <!-- add javascript  file  -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
